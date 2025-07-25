@@ -1,0 +1,41 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.card {
+  cursor: pointer;
+  perspective: 1000px;
+
+  &__inner {
+    @include square-ratio;
+    border-radius: $radius-lg;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+  &--flipped &__inner {
+    transform: rotateY(180deg);
+  }
+
+  &__front,
+  &__back {
+    @include card-face;
+    font-size: 2.2rem;
+  }
+
+  &__front {
+    background-color: $color-card-front;
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
