@@ -6,6 +6,9 @@ const App = () => {
     <div className="app">
       <h1 className="app__title">Memory Game</h1>
       <Game />
+      <footer>
+        Una creación de <a href="https://nadia.dev" target="_blank" rel="noreferrer">&lt;micazoyolli /&gt; ✨</a>
+      </footer>
     </div>
   );
 };

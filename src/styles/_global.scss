@@ -51,4 +51,19 @@ body {
       font-size: 2rem;
     }
   }
+
+  a {
+    color: $color-card-front;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 1rem;
+    z-index: 1;
+  }
 }
