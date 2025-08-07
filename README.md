@@ -16,23 +16,32 @@ Juego de memoria interactivo con niveles de dificultad, cronómetro y diseño re
 - HTML5 + CSS3
 - Buenas prácticas de accesibilidad y rendimiento
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 
 ```
-📦 memory-game
- ┣ 📂 public
- ┃ ┣ 📂 assets
- ┃ ┃ ┣ 📂 icons
- ┃ ┃ ┗ 📂 monsters
- ┃ ┗ 📄 screenshot.png
- ┣ 📂 src
- ┃ ┣ 📂 components
- ┃ ┃ ┣ 📂 Card
- ┃ ┃ ┗ 📂 Game
- ┃ ┣ 📂 styles
- ┃ ┗ 📂 utils
- ┣ 📄 index.html
- ┗ 📄 README.md
+memory-game
+├── public/
+│   ├── assets/
+│   ├── icons/
+│   ├── favicon.ico
+│   ├── manifest.json
+│   ├── meta.jpg
+│   ├── robots.txt
+│   └── sitemap.xml
+├── src/
+│   ├── components/
+│   |   ├── Card/
+│   |   ├── Game/
+│   ├── styles/
+│   └── styles/
+├── .editorconfig
+├── .gitignore
+├── .nvmrc
+├── LICENSE
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.js
 ```
 
 ## ▶️ Uso
