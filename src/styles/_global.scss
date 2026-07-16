@@ -1,3 +1,4 @@
+@use '@micazoyolli/foundation/scss' as foundation;
 @use './variables' as *;
 
 body {
@@ -65,5 +66,16 @@ body {
     margin-top: auto;
     padding: 1rem;
     z-index: 1;
+  }
+}
+
+@include foundation.reduced-motion {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
   }
 }

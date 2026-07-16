@@ -10,11 +10,13 @@ Juego de memoria interactivo con niveles de dificultad, cronómetro y diseño re
 
 ## 🚀 Tecnologías usadas
 
-- React + Vite
+- React 19 + Vite 8
 - TypeScript
 - SCSS (con estructura modular)
 - HTML5 + CSS3
 - Buenas prácticas de accesibilidad y rendimiento
+- Node 24
+- @micazoyolli/foundation para SEO/build y reduced motion
 
 ## Estructura del proyecto
 
@@ -49,6 +51,9 @@ memory-game
 ```bash
 yarn install
 yarn dev
+yarn lint
+yarn typecheck
+yarn build
 ```
 
 Abre `http://localhost:5173/memory-game/` para jugar.
