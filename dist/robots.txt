@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /memory-game/
+Sitemap: https://micazoyolli.github.io/memory-game/sitemap.xml
