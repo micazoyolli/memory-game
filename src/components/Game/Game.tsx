@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Card from '../Card/Card';
 import { generateCards } from '../../utils/cardGenerator';
 import './Game.scss';
@@ -9,8 +9,7 @@ interface CardType {
 }
 
 const Game = () => {
-  const isMobile = window.innerWidth < 400;
-  const defaultPairCount = isMobile ? 6 : 10;
+  const defaultPairCount = useMemo(() => (window.innerWidth < 400 ? 6 : 10), []);
 
   const [cards, setCards] = useState<CardType[]>([]);
   const [disabled, setDisabled] = useState(false);
@@ -25,7 +24,7 @@ const Game = () => {
 
   const hasWon = matched.length === cards.length && gameStarted;
 
-  const resetGame = (count: number = defaultPairCount) => {
+  const resetGame = useCallback((count: number = defaultPairCount) => {
     setCards(generateCards(count));
     setDisabled(false);
     setMatched([]);
@@ -33,11 +32,11 @@ const Game = () => {
     setSelected([]);
     setTime(0);
     setTimerRunning(false);
-  };
+  }, [defaultPairCount]);
 
   useEffect(() => {
     resetGame(pairCount);
-  }, [pairCount]);
+  }, [pairCount, resetGame]);
 
   useEffect(() => {
     if (selected.length === 2) {
@@ -47,12 +46,14 @@ const Game = () => {
         setMatched((prev) => [...prev, first, second]);
         setScore((prev) => prev + 10);
       }
-      setTimeout(() => {
+      const timeout = window.setTimeout(() => {
         setSelected([]);
         setDisabled(false);
       }, 1000);
+
+      return () => window.clearTimeout(timeout);
     }
-  }, [selected]);
+  }, [cards, selected]);
 
   useEffect(() => {
     const interval = timerRunning && gameStarted && !hasWon
