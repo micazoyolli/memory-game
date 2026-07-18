@@ -2,7 +2,7 @@
 
 Juego de memoria interactivo con niveles de dificultad, cronómetro y diseño responsive. Ideal para ejercitar la mente y divertirse descubriendo pares de monstruos.
 
-<img alt="Memory Game" src="https://github.com/micazoyolli/memory-game/blob/master/public/assets/screenshot.png" width="500" />
+<img alt="Memory Game" src="https://github.com/micazoyolli/memory-game/blob/main/public/assets/screenshot.png" width="500" />
 
 ## 🌐 Demo
 
