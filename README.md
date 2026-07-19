@@ -18,7 +18,7 @@ Juego de memoria interactivo con niveles de dificultad, cronómetro y diseño re
 - Node 24
 - @micazoyolli/foundation para SEO/build y reduced motion
 
-## Estructura del proyecto
+## 📦 Estructura del proyecto
 
 ```
 memory-game
@@ -57,6 +57,12 @@ yarn build
 ```
 
 Abre `http://localhost:5173/memory-game/` para jugar.
+
+## Despliegue en GitHub Pages
+
+Este proyecto se publica en GitHub Pages desde la rama `gh-pages`. El comando `yarn deploy` compila la aplicación, limpia archivos `.DS_Store` del build y publica `dist/` usando el CLI de Micazoyolli Foundation sin crear commits de despliegue en `main`.
+
+La configuración `base` de Vite debe conservar la subruta del repositorio: `/memory-game/`.
 
 ## 🧠 Funcionalidad
 
