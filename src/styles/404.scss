@@ -12,23 +12,6 @@
   place-items: center;
   text-align: center;
 
-  &__brand {
-    display: inline-flex;
-
-    &:focus-visible {
-      outline: 3px solid currentcolor;
-      outline-offset: 4px;
-    }
-  }
-
-  &__logo {
-    border-radius: 1rem;
-    display: block;
-    height: 4.5rem;
-    margin: 0 auto 1.5rem;
-    width: 4.5rem;
-  }
-
   &__panel {
     max-width: 34rem;
   }
@@ -51,17 +34,6 @@
     margin: 0 0 1.5rem;
   }
 
-  &__footer {
-    align-self: end;
-    font-size: 0.875rem;
-    padding-top: 1.5rem;
-
-    a {
-      color: inherit;
-      font-weight: 700;
-    }
-  }
-
   &__link {
     align-items: center;
     background: $color-text-dark;
@@ -79,6 +51,20 @@
     &:focus-visible {
       outline: 3px solid $color-primary;
       outline-offset: 4px;
+    }
+  }
+}
+
+.footer {
+  padding: 1rem;
+  z-index: 1;
+
+  a {
+    color: $color-card-front;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
     }
   }
 }
