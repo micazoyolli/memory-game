@@ -14,8 +14,12 @@ Juego de memoria con niveles de dificultad, cronómetro y dinámica de descubrim
 - TypeScript
 - SCSS
 - Vite
-- Node 24
 - Micazoyolli Foundation para SEO/build y reduced motion
+
+## 🧱 Requisitos
+
+- Node 24.18.1 (`engines.node`: `>=24.18.1 <25`)
+- Yarn 1.22.22
 
 ## 📦 Instalación
 
